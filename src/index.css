@@ -299,3 +299,69 @@ footer {
 i[class*="van-type-"] {
   padding: 7px 14px;
 }
+
+.van-detail-container {
+  padding: 27px;
+}
+
+.van-detail-container .back-button {
+  color: #201f1d;
+  text-decoration: underline;
+  position: relative;
+}
+
+.van-detail-container .back-button::before {
+  content: "➜";
+  display: inline-block;
+  transform: rotate(180deg);
+  margin-right: 8px;
+  padding-bottom: 2px;
+  color: #858585;
+  text-decoration: none;
+}
+
+.van-detail-container .back-button:visited {
+}
+
+.van-detail-container .back-button span {
+  text-decoration: underline;
+}
+
+.van-detail {
+  display: flex;
+  flex-direction: column;
+  color: #161616;
+}
+
+.van-detail img {
+  border-radius: 5px;
+  margin-block: 47px;
+}
+
+.van-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.van-detail > i {
+  align-self: flex-start;
+}
+
+.van-detail .van-price {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.van-detail .van-price span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.van-detail .link-button {
+  background-color: #ff8c38;
+  color: white;
+  font-size: 1.125rem;
+  border-radius: 4.98px;
+  border: none;
+  height: 49.83px;
+}

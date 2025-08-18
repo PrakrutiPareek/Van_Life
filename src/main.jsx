@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Vans from "./Pages/Vans";
 import "./server";
+import VanDetails from "./Pages/VanDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
+        <Route path="/vans/:id" element={<VanDetails />} />
       </Routes>
       <footer>Ⓒ 2022 #VANLIFE</footer>
     </BrowserRouter>

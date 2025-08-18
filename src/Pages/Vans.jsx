@@ -10,8 +10,6 @@ function Vans() {
       .then((data) => setVans(data.vans));
   }, []);
 
-  console.log(vans);
-
   const vandetails = vans.map((van) => (
     <div key={van.id} className="van-tile">
       <Link
