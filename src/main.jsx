@@ -1,8 +1,10 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Vans from "./Pages/Vans";
+import "./server";
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/vans" element={<Vans />} /> */}
+        <Route path="/vans" element={<Vans />} />
       </Routes>
       <footer>Ⓒ 2022 #VANLIFE</footer>
     </BrowserRouter>

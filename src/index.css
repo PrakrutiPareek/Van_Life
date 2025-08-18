@@ -7,6 +7,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  background-color: #fff7ed;
+  color: #161616;
 }
 
 body::-webkit-scrollbar {
@@ -19,7 +21,6 @@ body {
 }
 
 header {
-  background-color: #fff7ed;
   height: 80px;
   display: flex;
   flex-direction: row;
@@ -122,17 +123,6 @@ footer {
 
 /* About Page */
 
-.about-page {
-  /* width: 100%; */
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; */
-  color: #161616;
-  background-color: #fff7ed;
-}
-
 .about-page-hero-img {
   max-width: 100%;
 }
@@ -182,4 +172,130 @@ footer {
   text-align: center;
   text-decoration: none;
   border-radius: 10px;
+}
+
+.vans-page {
+  margin: 54.23px 26.91px;
+}
+
+.vans-page > h1 {
+  margin-bottom: 22.39px;
+}
+
+.van-option-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 55.69px;
+}
+
+.van-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.van-options > a {
+  text-decoration: none;
+  background-color: #ffead0;
+  width: 104px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4d4d4d;
+  border-radius: 5px;
+}
+
+.van-option-wrapper > button {
+  font-family: "Inter", sans-serif;
+  background-color: #fff7ed;
+  color: #4d4d4d;
+  border: none;
+  text-decoration: underline;
+}
+
+.vans-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 180px;
+}
+
+.van-tile {
+  width: 229.22px;
+  height: 309.96px;
+}
+
+.van-tile a {
+  color: #161616;
+  text-decoration: none;
+}
+
+.van-tile img {
+  width: 229.22px;
+  height: 229.22px;
+  border-radius: 5px;
+}
+
+.van-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.van-info > h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 9.97px;
+}
+
+.van-info > p {
+  display: flex;
+  flex-direction: column;
+}
+
+.van-type {
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffead0;
+  color: #4d4d4d;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.van-type:hover {
+  color: #ffead0;
+}
+
+.van-type:focus {
+  outline: none;
+}
+
+.van-type.selected {
+  color: #ffead0;
+}
+
+.van-type.simple:hover,
+.van-type.simple.selected {
+  background-color: #e17654;
+}
+
+.van-type.rugged:hover,
+.van-type.rugged.selected {
+  background-color: #115e59;
+}
+
+.van-type.luxury:hover,
+.van-type.luxury.selected {
+  background-color: #161616;
+}
+
+i[class*="van-type-"] {
+  padding: 7px 14px;
 }
