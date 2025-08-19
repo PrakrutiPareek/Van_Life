@@ -41,6 +41,10 @@ header .logo {
   font-size: 25px;
 }
 
+header .logo:hover {
+  text-decoration: none;
+}
+
 header a {
   text-decoration: none;
   color: #4d4d4d;

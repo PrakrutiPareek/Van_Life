@@ -1,16 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
+  const styles = {
+    fontWeight: "bold",
+    textDecoration: "underline",
+    color: "#161616",
+  };
+
   return (
     <header>
-      <Link className="logo" to="/">
+      <NavLink className="logo" to="/">
         #VANLIFE
-      </Link>
+      </NavLink>
       <nav>
-        <Link to="/host">Host</Link>
-        <Link to="/about">About</Link>
-        <Link to="/vans">Vans</Link>
+        <NavLink
+          to="/host"
+          style={({ isActive }) => (isActive ? styles : null)}
+        >
+          Host
+        </NavLink>
+        <NavLink
+          to="/about"
+          style={({ isActive }) => (isActive ? styles : null)}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/vans"
+          style={({ isActive }) => (isActive ? styles : null)}
+        >
+          Vans
+        </NavLink>
       </nav>
     </header>
   );
