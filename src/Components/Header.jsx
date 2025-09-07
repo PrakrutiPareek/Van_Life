@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import imgUrl from "../Images/avatar-icon.png";
 
 function Header() {
   const styles = {
@@ -32,6 +33,9 @@ function Header() {
         >
           Vans
         </NavLink>
+        <Link to="login" className="login-link">
+          <img src={imgUrl} className="login-icon" />
+        </Link>
       </nav>
     </header>
   );

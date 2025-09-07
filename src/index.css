@@ -27,10 +27,10 @@ body {
 }
 
 header {
-  height: 80px;
+  height: 110px;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  padding-block: 10px;
 }
 
 header .logo {
@@ -45,6 +45,10 @@ header .logo:hover {
   text-decoration: none;
 }
 
+nav {
+  display: flex;
+}
+
 header a {
   text-decoration: none;
   color: #4d4d4d;
@@ -55,6 +59,16 @@ header a {
 header a:hover {
   color: #161616;
   text-decoration: underline;
+}
+
+.login-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.login-link {
+  display: inline-flex;
+  align-items: center;
 }
 
 footer {
@@ -535,4 +549,51 @@ i[class*="van-type-"] {
   color: #ffffff;
   text-align: center;
   text-decoration: none;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 27px;
+  margin-top: 51.52px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.login-form > input {
+  border: 1px solid rgba(209, 213, 219);
+  height: 40px;
+  text-indent: 10px;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  font-weight: 400;
+}
+
+.login-form > input:focus {
+  outline: none;
+}
+
+.login-form > input:first-of-type {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.login-form > input:last-of-type {
+  border-radius: 0px 0px 6px 6px;
+  border-top: none;
+}
+
+.login-form > button {
+  background-color: #ff8c38;
+  border: none;
+  border-radius: 6px;
+  height: 55px;
+  margin-top: 22px;
+  color: white;
+  font-family: "Inter", sans-serif;
 }
