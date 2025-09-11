@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Form, redirect, useLoaderData, useNavigate } from "react-router-dom";
+import {
+  Form,
+  redirect,
+  useActionData,
+  useLoaderData,
+  useNavigation,
+} from "react-router-dom";
 import { loginUser } from "../api";
 
 export function loader({ request }) {
@@ -10,18 +16,21 @@ export async function action({ request }) {
   const formData = await request.formData();
   const email = formData.get("email");
   const password = formData.get("password");
-  const data = await loginUser({ email, password });
-  localStorage.setItem("loggedin", true);
-
-  return redirect("/host");
+  const pathname =
+    new URL(request.url).searchParams.get("redirectTo") || "/host";
+  try {
+    const data = await loginUser({ email, password });
+    localStorage.setItem("loggedin", true);
+    return redirect(pathname);
+  } catch (error) {
+    return error;
+  }
 }
 
 function Login() {
-  const [status, setStatus] = useState("idle");
-  const [error, setError] = useState(null);
-
+  const error = useActionData();
   const message = useLoaderData();
-  const navigate = useNavigate();
+  const navigation = useNavigation();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -44,8 +53,8 @@ function Login() {
       <Form method="post" className="login-form" replace>
         <input name="email" type="email" placeholder="Email address" />
         <input name="password" type="password" placeholder="Password" />
-        <button disabled={status === "submitting"}>
-          {status === "submitting" ? "Logging in..." : "Log in"}
+        <button disabled={navigation.state === "submitting"}>
+          {navigation.state === "submitting" ? "Logging in..." : "Log in"}
         </button>
       </Form>
     </div>
