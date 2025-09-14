@@ -829,7 +829,6 @@ img.graph {
   }
 
   nav {
-    flex-direction: column;
     gap: 10px;
   }
 
