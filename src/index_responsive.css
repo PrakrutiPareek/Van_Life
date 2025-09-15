@@ -820,6 +820,9 @@ img.graph {
     height: 80px;
     padding-block: 5px;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   header .logo {
@@ -829,6 +832,7 @@ img.graph {
 
   nav {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
   }
 
