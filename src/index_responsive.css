@@ -819,8 +819,7 @@ img.graph {
   header {
     height: 80px;
     padding-block: 5px;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
   }
 
   header .logo {
@@ -829,8 +828,8 @@ img.graph {
   }
 
   nav {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 8px;
   }
 
   header a {
@@ -1153,8 +1152,6 @@ img.graph {
     font-size: 13px;
   }
 }
-
-
 
 @media (max-width: 900px) {
   header {
