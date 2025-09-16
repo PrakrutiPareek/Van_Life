@@ -8,8 +8,10 @@ import {
   query,
   where,
 } from "firebase/firestore/lite";
+
+const api_key = import.meta.env.VITE_API_KEY;
 const firebaseConfig = {
-  apiKey: "AIzaSyAK3W_R3qRM1dE_iOnleK22yG0WySNqWRk",
+  apiKey: api_key,
   authDomain: "vanlife-c1c69.firebaseapp.com",
   projectId: "vanlife-c1c69",
   storageBucket: "vanlife-c1c69.firebasestorage.app",
