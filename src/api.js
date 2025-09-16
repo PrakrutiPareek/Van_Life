@@ -9,7 +9,7 @@ import {
   where,
 } from "firebase/firestore/lite";
 
-const api_key = import.meta.env.VITE_API_KEY;
+const api_key = import.meta.env.VITE_VANLIFE_API;
 const firebaseConfig = {
   apiKey: api_key,
   authDomain: "vanlife-c1c69.firebaseapp.com",
