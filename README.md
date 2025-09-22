@@ -17,7 +17,7 @@ Includes routing, dynamic pages, and state management — inspired by real-world
 
 ## 🖼️ Screenshot
 
-![Van Life Screenshot](public/images/van-life_screenshot.png)
+![Van Life Screenshot](public/Images/van-life_screenshot.png)
 
 ---
 
